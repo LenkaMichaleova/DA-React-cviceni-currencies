@@ -6,12 +6,13 @@ const currencies = {
   GBP: { CZK: 29.067 }
 };
 
-export const Rate = () => {
+export const Rate = ({from}) => {
+  // console.log(currencies[from].CZK)
   return (
     <div className="rate">
-      <div className="rate__currency">1 USD</div>
+      <div className="rate__currency">1 {from}</div>
       <div>=</div>
-      <div className="rate__value">22 CZK</div>
+      <div className="rate__value"> {currencies[from].CZK} CZK</div>
     </div>
   );
 };
